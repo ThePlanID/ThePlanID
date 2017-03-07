@@ -111,7 +111,7 @@ header .intro-text .skills {
 header .intro-text .span
 {
   font-weight: 700;
-  font-size: 10em;
+  font-size: 20em;
 }
 @media (min-width: 768px) {
   header .container {
