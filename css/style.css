@@ -108,6 +108,11 @@ header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
+header .intro-text .span
+{
+  font-weight: 700;
+  font-size: 10em;
+}
 @media (min-width: 768px) {
   header .container {
     padding-top: 200px;
@@ -129,6 +134,7 @@ header .intro-text .skills {
   font-weight: 700;
   border: none;
 }
+
 .navbar-custom a:focus {
   outline: none;
 }
@@ -177,6 +183,14 @@ header .intro-text .skills {
   color: white;
   border-color: #18a3b4;
 }
+
+.navbar-brand>img {
+  height: 500%;
+  padding: 15px;
+  width: auto;
+  margin-top: -40px;
+}
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 25px 0;
