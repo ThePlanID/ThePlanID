@@ -1,4 +1,10 @@
+//Obtiene el numero del url http://theplanid.com?mms=#
+var numbermms = location.search.split('mms=')[1]
+
+//Obtiene la clase del source html
 var $message = document.querySelector('.message');
+
+//Se enlistan los mensajes
 var messages = [
 "Optimización a través de ejecución efectiva.",
 "Productividad a través de integración de procesos.",
@@ -6,8 +12,8 @@ var messages = [
 "Productividad a través de ejecución oportuna de procesos."
 ];
 
-var random = Math.floor(Math.random() * 3) + 0;
+//Se obtiene el mensaje por medio del numero
+var messagetoshow = messages[numbermms];
 
-var messagetoshow = messages[random];
-
+//Se agrega el mensaje al source html
 $message.innerHTML = messagetoshow;
