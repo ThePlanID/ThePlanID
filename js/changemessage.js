@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
   var messagetoshow;
   //Obtiene el numero del url http://theplanid.com?mms=#
   var numbermms = location.search.split('mms=')[1]
@@ -14,12 +14,18 @@
   "Productividad a través de ejecución oportuna de procesos."
   ];
   //Se obtiene el mensaje por medio del numero
-  if(numbermms == null)
+  if(numbermms != null)
   {
-    messagetoshow = messages[0];
+    if(numbermms < messages.length)
+    {
+        messagetoshow = messages[numbermms];
+    }
+    else {
+          messagetoshow = messages[0];
+    }
   }
   else {
-    messagetoshow = messages[numbermms];
+        messagetoshow = messages[0];
   }
 
   //Se agrega el mensaje al source html
