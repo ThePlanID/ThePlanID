@@ -1,4 +1,4 @@
-﻿(function($){
+(function($){
   var messagetoshow;
   //Obtiene el numero del url http://theplanid.com?mms=#
   var numbermms = location.search.split('mms=')[1]
@@ -8,24 +8,25 @@
 
   //Se enlistan los mensajes
   var messages = [
-  "Optimización a través de ejecución efectiva.",
-  "Productividad a través de integración de procesos.",
-  "Ejecución oportuna de procesos.",
-  "Productividad a través de ejecución oportuna de procesos."
+    "Optimización a través de ejecución efectiva.",
+    "Productividad a través de integración de procesos.",
+    "Ejecución oportuna de procesos.",
+    "Productividad a través de ejecución oportuna de procesos."
   ];
   //Se obtiene el mensaje por medio del numero
   if(numbermms != null)
   {
+    alert(messages.length);
     if(numbermms < messages.length)
     {
-        messagetoshow = messages[numbermms];
+      messagetoshow = messages[numbermms];
     }
     else {
-          messagetoshow = messages[0];
+      messagetoshow = messages[0];
     }
   }
   else {
-        messagetoshow = messages[0];
+    messagetoshow = messages[0];
   }
 
   //Se agrega el mensaje al source html
