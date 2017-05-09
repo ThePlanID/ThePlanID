@@ -192,7 +192,7 @@
               <!--BOTON-->
               <div class="row">
                 <div class="form-group col-lg-12 col-xs-12">
-                  <button type="submit" class="btn btn-primary btn-lg" id="btnSubmit" >Enviar</button>
+                  <button type="submit" class="btn btn-primary btn-lg" id="btnSubmit" onclick="sendMail(); return false">Enviar</button>
                 </div>
               </div>
 
@@ -263,7 +263,10 @@
       <!-- Bootstrap Core JavaScript -->
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css.map">
+      </script>
 
+      <!-- Send Email script -->
+      <script src="https://smtpjs.com/smtp.js">
       </script>
 
       <!-- Plugin JavaScript -->
@@ -275,7 +278,42 @@
       <script src="js/changemessage.js"></script>
       <!-- Theme JavaScript -->
       <script src="js/freelancer.min.js"></script>
-
+      <script type="text/javascript">
+      // function sendMail(){
+      //   Email.send("noreply@theplanid.com",
+      //   "info@theplanid.com",
+      //   "This is a subject",
+      //   "this is the body",
+      //   "smtp.ipage.com",
+      //   "theplanid.com",
+      //   "GHIC@planid2016tec");
+      // }
+      $('#btnSubmit').click(function() {
+        $.ajax({
+          type: "POST",
+          url: "https://mandrillapp.com/api/1.0/messages/send.json",
+          data: {
+            'key': "hduzuvS2dKtoem8vgDgmAQ", //change apikey
+            'message': {
+              "from_email": 'noreply@theplanid.com',
+              "to": [
+                {
+                  'email': "info@theplanid.com",
+                  // 'name': 'webpage ifo',
+                  'type': 'to'
+                }
+                //can add more RECIPIENT
+              ],
+              'autotext': 'true',
+              'subject': 'info webpage',
+              'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!' //get conten from form
+            }
+          }
+        }).done(function(response) {
+          console.log(response); // if you're into that sorta thing
+        });
+      });
+      </script>
     </body>
     </html>
 
