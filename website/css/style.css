@@ -1,8 +1,8 @@
 /*!
- * Start Bootstrap - Freelancer v1.1.1 (http://startbootstrap.com/template-overviews/freelancer)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+* Start Bootstrap - Freelancer v1.1.1 (http://startbootstrap.com/template-overviews/freelancer)
+* Copyright 2013-2016 Start Bootstrap
+* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+*/
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -93,6 +93,7 @@ header .container {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+
 header img {
   display: block;
   margin: 0 auto 20px;
@@ -107,6 +108,11 @@ header .intro-text .name {
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+}
+header .intro-text .span
+{
+  font-weight: 700;
+  font-size: 20em;
 }
 @media (min-width: 768px) {
   header .container {
@@ -129,6 +135,7 @@ header .intro-text .skills {
   font-weight: 700;
   border: none;
 }
+
 .navbar-custom a:focus {
   outline: none;
 }
@@ -177,6 +184,27 @@ header .intro-text .skills {
   color: white;
   border-color: #18a3b4;
 }
+
+.navbar-brand>img {
+  height: 500%;
+  padding: 15px;
+  width: auto;
+  margin-top: -40px;
+}
+.message
+{
+  font-size: 60px;
+}
+/*Comillas del message*/
+/*.message:before
+{
+  content: '\201C';
+}
+
+.message:after
+{
+  content: '\201D';
+}*/
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 25px 0;
