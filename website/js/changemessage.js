@@ -16,7 +16,7 @@
   //Se obtiene el mensaje por medio del numero
   if(numbermms != null)
   {
-    alert(messages.length);
+    // alert(messages.length);
     if(numbermms < messages.length)
     {
       messagetoshow = messages[numbermms];

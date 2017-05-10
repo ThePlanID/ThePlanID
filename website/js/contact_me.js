@@ -9,7 +9,7 @@ $(function() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
-            
+
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
@@ -21,13 +21,25 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
                 type: "POST",
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    'key': "xrEjY714pCXZKD0kAbPtbg", //--- testing apikey ->akQ5b7Hw5CzK7-V0qwXXFA
+                    'message': {
+                      "from_email": 'info_webpage@theplanid.com',
+                      "to": [
+                        {
+                          'email': "info@theplanid.com",
+                          // 'name': 'webpage ifo',
+                          'type': 'to'
+                        }
+                        //can add more RECIPIENT
+                      ],
+                      'autotext': 'true',
+                      'subject': 'Asking for info webpage',
+                      'text': "email:" +email +"\n" + "phone: "+ phone + "\n" + "name: "+name + "\n" + "message: "+ message ,
+                       //get conten from form
+                    }
                 },
                 cache: false,
                 success: function() {
