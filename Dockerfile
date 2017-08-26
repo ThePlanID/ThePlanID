@@ -26,7 +26,7 @@ VOLUME /app
 # Mount here your custom config folder
 VOLUME /conf
 
-EXPOSE 443 80
+EXPOSE 443 80 9005
 
 CMD ["/start.sh"]
 
