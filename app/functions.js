@@ -1,4 +1,4 @@
-require "test.js";
+require "firebaseInit.js";
 //
 // function userSession(id,userid,date,token,status){
 // 	this.id = id;

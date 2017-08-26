@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Starting container build ..."
+docker build --tag firebase/theplanid .
+docker run --name theplanid -d -it -v app:/www/app -w /www/app -p 8080:80 
+firebase/theplanid

@@ -1,0 +1,54 @@
+//
+{
+  "process":{
+    "name": "",
+    "description": "",
+    "version":1.0,
+    "stages":
+    [
+      {
+        "name": "",
+        "description": "",
+        "predecessor":"",
+        "activities":
+        [
+          {
+            "name_id" : "",
+            "description": ""
+          },
+          {
+            "name_id" : "",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "projects":
+  [
+    {
+      "name": "",
+      "description": "",
+      "startdate": "",
+      "enddate": "",
+      "stages":
+      [
+        {
+          "name":"",
+          "weight": "",
+          "activities":
+          [
+            {
+              "name_id": "",
+              "assigments": ["ddd@ddd.com", "jjj@ddd.com"]
+            },
+            {
+              "name_id": "",
+              "assigments": ["ddd@ddd.com", "jjj@ddd.com"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
