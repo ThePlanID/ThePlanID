@@ -1,4 +1,4 @@
-//
+//Config template to be used to initialize the database process / projects 
 {
   "process":{
     "name": "",
