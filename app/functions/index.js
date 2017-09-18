@@ -11,6 +11,7 @@ const path = require('path');
 // Folder where all your individual Cloud Functions files are located.
 const FUNCTIONS_FOLDER = './myfuncts';
 
+// Recursively export each file functions.
 fs.readdirSync(path.resolve(__dirname, FUNCTIONS_FOLDER)).forEach(file => { // list files in the folder.
   if(file.endsWith('.js')) {
     const fileBaseName = file.slice(0, -3); // Remove the '.js' extension
