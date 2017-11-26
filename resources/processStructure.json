@@ -1,4 +1,3 @@
-//Config template to be used to initialize the database process / projects 
 {
   "process":{
     "name": "",
@@ -27,6 +26,7 @@
   "projects":
   [
     {
+	    "processVersion":1.0,
       "name": "",
       "description": "",
       "startdate": "",
