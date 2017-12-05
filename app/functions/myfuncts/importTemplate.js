@@ -7,21 +7,17 @@ try {admin.initializeApp(functions.config().firebase);} catch(e) {} // You do th
 exports = module.exports =
 	functions.https.onRequest((request, response) => 
 	{
-				
-		var uid, proc;
-		const process, projects
-		
-		uid = functions.auth().currentUser.uid;		
-		uid === null ? true : response.status(303).send('No user');
+
+		var proc, process, projects;
 
 		proc = request.body;
 		proc.hasOwnProperty('process') ? process = proc["process"] : response.status(400).send('no process');
 
-		admin.database().ref('/'+ uid +'/processes').push ({process:process});
+		admin.database().ref('/{uid}/processes').push ({process:process});
 
 		if (proc.hasOwnProperty('projects')){
 			projects = proc['projects'];			
-			admin.database().ref('/'+ uid +'/projects').push ({projects:projects}).then( snapshot =>{
+			admin.database().ref('/{uid}/projects').push ({projects:projects}).then( snapshot =>{
 				response.status(303).send(admin.database().ref);
 			});
 		} else {

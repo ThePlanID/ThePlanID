@@ -1,5 +1,3 @@
-require ("./firebaseInit.js");
-
 function Workflow(id, date, fromStage, toStage){
 	this.id = id;
 	this.date = date;

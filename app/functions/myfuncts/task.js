@@ -1,5 +1,3 @@
-require ("./firebaseInit.js");
-
 function Task(id, name, processAmount, taskType, valueAmount){
 	this.id = id;
 	this.name = name;

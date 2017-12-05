@@ -1,5 +1,3 @@
-require ("./firebaseInit.js");
-
 function writeUserXProcessinstance(iduser, date, idprocess){
 	var data ={
 		'iduser': iduser,
