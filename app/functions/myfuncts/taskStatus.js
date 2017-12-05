@@ -1,4 +1,3 @@
-require ("./firebaseInit.js");
 
 function TaskStatus(id, name){
 	this.id = id;
