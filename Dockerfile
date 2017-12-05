@@ -8,11 +8,11 @@ RUN apt install -y \
 	nginx-full \
 	vim
 
-ADD scripts/start.sh /start.sh
-ADD scripts/setup.sh /setup.sh
-ADD conf/supervisord.conf /etc/supervisord.conf
-ADD conf/site.conf /etc/nginx/sites-available/default
-COPY conf /conf/
+ADD provision/scripts/start.sh /start.sh
+ADD provision/scripts/setup.sh /setup.sh
+ADD provision/conf/supervisord.conf /etc/supervisord.conf
+ADD provision/conf/site.conf /etc/nginx/sites-available/default
+COPY provision/conf /conf/
 COPY app /app/
 
 RUN chmod 755 /setup.sh
@@ -26,7 +26,7 @@ VOLUME /app
 # Mount here your custom config folder
 VOLUME /conf
 
-EXPOSE 443 80 9005
+EXPOSE 443 80 9005 5000
 
 CMD ["/start.sh"]
 
