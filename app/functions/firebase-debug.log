@@ -1,0 +1,50 @@
+[debug] [2017-12-08T00:31:51.400Z] ----------------------------------------------------------------------
+[debug] [2017-12-08T00:31:51.410Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --only functions
+[debug] [2017-12-08T00:31:51.411Z] CLI Version:   3.16.0
+[debug] [2017-12-08T00:31:51.411Z] Platform:      win32
+[debug] [2017-12-08T00:31:51.411Z] Node Version:  v6.11.3
+[debug] [2017-12-08T00:31:51.412Z] Time:          Thu Dec 07 2017 18:31:51 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:51.412Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-08T00:31:51.449Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-08T00:31:51.450Z] > authorizing via signed-in user
+[debug] [2017-12-08T00:31:51.457Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/theplanid-895f3  
+  
+ Thu Dec 07 2017 18:31:51 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:52.126Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-08T00:31:52.129Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/theplanid-895f3/tokens  
+  
+ Thu Dec 07 2017 18:31:52 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:52.683Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'theplanid-895f3'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-12-08T00:31:53.271Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase": "^4.7.0",
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2017-12-08T00:31:53.275Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/theplanid-895f3?view=CONSUMER_VIEW  
+  
+ Thu Dec 07 2017 18:31:53 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:53.277Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/theplanid-895f3?view=CONSUMER_VIEW  
+  
+ Thu Dec 07 2017 18:31:53 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:54.130Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-12-08T00:31:54.246Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-08T00:31:54.249Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/theplanid-895f3  
+  
+ Thu Dec 07 2017 18:31:54 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:54.250Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/theplanid-895f3/apiKeys  
+  
+ Thu Dec 07 2017 18:31:54 GMT-0600 (Hora estándar de Centroamérica)
+[debug] [2017-12-08T00:31:54.783Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-08T00:31:54.952Z] <<< HTTP RESPONSE 200
