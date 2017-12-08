@@ -19,6 +19,8 @@ exports = module.exports =
 
 		proc.hasOwnProperty('idToken') ? idToken = proc["idToken"] : response.status(400).send("void token");
 
+		//Validate Id token in request
+		
 		// admin.auth().verifyIdToken(previdToken).then(decodedIdToken => {
 		// 	idToken = decodedIdToken.uid; //este es el que hay que usar
 		// 	next();  //
@@ -30,7 +32,7 @@ exports = module.exports =
 
 		if (proc.hasOwnProperty('projects')){
 			projects = proc['projects'];			
-			admin.database().ref('/'+ idToken +'/projects').push ({projects:projects});//.then( snapshot =>{response.status(303).send("snapshot: "+admin.database().ref);});
+			admin.database().ref('/'+ idToken +'/projects').push ({projects:projects}).then( snapshot =>{response.status(303).send("snapshot: "+admin.database().ref);});
 		} else {
 			response.status(303).send("else: "+admin.database().ref);
 		}

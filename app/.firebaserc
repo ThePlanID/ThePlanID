@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "theplanid-895f3"
+    "default": "theplanid-895f3",
+    "test": "theplanid-895f3"
   }
 }

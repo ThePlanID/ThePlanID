@@ -1,0 +1,22 @@
+{
+  "name": "theplanid",
+  "version": "1.0.0",
+  "description": "Backend functions",
+  "main": "main.js",
+  "scripts": {
+    "test": "theplanid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThePlanID/backend.git"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "ThePlanId",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ThePlanID/backend/issues"
+  },
+  "homepage": "https://github.com/ThePlanID/backend#readme"
+}

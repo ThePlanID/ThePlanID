@@ -1,0 +1,8 @@
+{
+    "name": "ThePlanID",
+    "short_name": "ThePlanID",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "gcm_sender_id": "405991042272"
+}
